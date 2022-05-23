@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView, ListView
+from .models import Events
+from typing import Any, Dict
 
-# Create your views here.
+
+class Index(ListView):
+    model = Events
+    template_name: str = 'base.html'
+
