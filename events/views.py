@@ -8,3 +8,4 @@ class Index(ListView):
     model = Events
     template_name: str = 'base.html'
 
+

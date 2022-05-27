@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from events.views import Index
+from users.views import Sign_Up_View
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view())
+    path('events/', Index.as_view()),
+    path('', Sign_Up_View.as_view(), name='sign-up'),
+
 ]
