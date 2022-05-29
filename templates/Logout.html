@@ -1,29 +1,18 @@
 {% extends 'base.html' %}
-{% block content %}
 
 {% load static %}
 
-<!doctype html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<!--    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">-->
+{% block head %}
     <link rel="icon" href="{% static 'EventLogo.png' %}" >
-
-    <title>Serwis agregujacy - Dziękujemy </title>
-
+    <title>Serwis agregujacy Logowanie </title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
-
     <!-- Bootstrap core CSS -->
     <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="{% static 'signin.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
-</head>
-
+ {% block content %}
   <body class="text-center">
     <form class="form-signin" style="margin: auto;">
       <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -33,5 +22,4 @@
       <label> <p><a href="/login/">Log in again</a></p> </label>
     </form>
   </body>
-
 {% endblock %}

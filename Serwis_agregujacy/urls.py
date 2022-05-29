@@ -22,7 +22,7 @@ from users.views import UserLoginView, UserLogoutView, SignUpView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view()),
+    path('', Index.as_view(), name='home'),
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
     path('sign-up/', SignUpView.as_view(), name='sign-up'),
